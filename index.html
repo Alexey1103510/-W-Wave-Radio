@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="img/logo-favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="libs/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
   <link rel="stylesheet" href="libs/choices.min.css">
   <link rel="stylesheet" href="libs/accordion.min.css">
   <link rel="stylesheet" href="css/fonts.css">
@@ -19,7 +20,6 @@
 <body>
   <header class="header">
     <div class="container header__top-container flex">
-
       <div class="header__logo-container flex">
         <a href="#" class="header__logo flex" aria-label="Логотип">
           <picture class="header__picture flex">
@@ -29,13 +29,11 @@
           </picture>
         </a>
       </div>
-
       <button class="burger header__burger btn-reset" aria-label="Бургер">
         <span class="burger__line"></span>
         <span class="burger__line"></span>
         <span class="burger__line"></span>
       </button>
-
       <nav class="nav header__nav">
         <ul class="nav__list list-reset flex" aria-label="Навигационное меню">
           <li class="nav__item">
@@ -65,9 +63,7 @@
           </li>
         </ul>
       </nav>
-
       <div class="header__form-search header-form-search flex">
-
         <button class="header-form-search__btn-open btn-reset flex" aria-label="Найти">
           <svg class="header-form-search__search" width="24" height="24" viewBox="0 0 24 24" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +74,6 @@
               stroke-linejoin="round" />
           </svg>
         </button>
-
         <form class="header-form-search__form flex" action="https://jsonplaceholder.typicode.com/posts" method="post"
           target="_blank">
           <input type="search" name="search" class="header-form-search__input" aria-label="Строка поиска"
@@ -95,9 +90,8 @@
           </button>
         </form>
       </div>
-
       <div class="header__form-private header-form-private flex">
-        <a class="header-form-private__btn btn-reset btn-icon flex" href="#" aria-label="Вход">
+        <a class="header-form-private__btn btn-reset btn-icon flex" href="#" aria-label="Вход" role="button">
           <svg class="header-form-private__icon" width="19" height="18" viewBox="0 0 19 18" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M9.5 1.5L2 5.25L9.5 9L17 5.25L9.5 1.5Z" stroke="#121723" stroke-width="1.5" stroke-linecap="round"
@@ -112,10 +106,83 @@
           </span>
         </a>
       </div>
-
+    </div>
+    <div class="modal">
+      <div class="modal__container">
+        <button class="modal__btn-closed btn-reset" aria-label="Закрыть">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="19.5" stroke-width="3" />
+            <path d="M29.6777 12L12 29.6777M29.6777 29.6777L12 12" stroke-width="3" />
+          </svg>
+        </button>
+        <h2 class="modal__title text-reset font-title">
+          Вход
+        </h2>
+        <p class="modal__text text-reset font-text">
+          Если у&nbsp;вас ещё нет аккаунта,
+          <a href="#" class="modal__register-link">
+            зарегистрируйтесь
+          </a>
+        </p>
+        <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <div class="modal__item">
+            <input class="modal__input" type="text" name="login" placeholder="Логин" data-validate-field="name"
+              aria-label="Введите Логин">
+          </div>
+          <div class="modal__item">
+            <input class="modal__input" type="password" name="password" placeholder="Пароль"
+              data-validate-field="password" aria-label="Введите Пароль">
+          </div>
+          <button class="modal__btn btn-reset btn" type="submit">
+            Войти
+          </button>
+        </form>
+        <p class="modal__help text-reset font-text">
+          Войти с&nbsp;помощью:
+        </p>
+        <ul class="modal__social modal-social list-reset flex">
+          <li class="modal-social__item">
+            <a href="http://www.facebook.com" class="modal-social__link modal-social__link-facebook flex"
+              aria-label="Фейсбук" target="_blank">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_24531_5473)">
+                  <path
+                    d="M26.3 36.6667V23.7667H30.6204L31.2667 18.7519H26.3V15.5519C26.3 14.1 26.7037 13.1093 28.7852 13.1093H31.4408V8.62408C30.1552 8.48769 28.8632 8.42154 27.5704 8.42594C23.7426 8.42594 21.1223 10.763 21.1223 15.0556V18.7519H16.7926V23.7667H21.1223V36.6667H5.18523C4.69408 36.6667 4.22306 36.4716 3.87577 36.1243C3.52848 35.777 3.33337 35.306 3.33337 34.8148V5.1852C3.33337 4.69405 3.52848 4.22303 3.87577 3.87574C4.22306 3.52845 4.69408 3.33334 5.18523 3.33334H34.8149C35.306 3.33334 35.777 3.52845 36.1243 3.87574C36.4716 4.22303 36.6667 4.69405 36.6667 5.1852V34.8148C36.6667 35.306 36.4716 35.777 36.1243 36.1243C35.777 36.4716 35.306 36.6667 34.8149 36.6667H26.3Z" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_24531_5473">
+                    <rect width="40" height="40" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+          <li class="modal-social__item">
+            <a href="https://vk.com" class="modal-social__link modal-social__link-vk flex" aria-label="ВК"
+              target="_blank">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="33.33" height="33.33" rx="2" />
+                <path
+                  d="M20.7487 26.332H19.3854C19.3854 26.332 16.3772 26.5131 13.7277 23.7545C10.8383 20.7461 8.28686 14.7765 8.28686 14.7765C8.28686 14.7765 8.13973 14.3853 8.29964 14.1959C8.47938 13.9831 8.96857 13.9695 8.96857 13.9695L12.2278 13.9482C12.2278 13.9482 12.5349 13.9994 12.7547 14.1608C12.9359 14.294 13.0373 14.543 13.0373 14.543C13.0373 14.543 13.5641 15.8752 14.2617 17.0804C15.6233 19.4331 16.2575 19.9477 16.7198 19.6957C17.3934 19.3283 17.1914 16.3698 17.1914 16.3698C17.1914 16.3698 17.2037 15.296 16.8522 14.8177C16.58 14.4475 16.0667 14.3391 15.84 14.3089C15.6566 14.2844 15.9576 13.8587 16.3478 13.6676C16.9343 13.3803 17.9699 13.3641 19.1938 13.3765C20.1473 13.3863 20.4219 13.4458 20.7946 13.5357C21.6597 13.7446 21.6327 14.4138 21.5745 15.8578L21.5745 15.8579C21.5571 16.2893 21.537 16.7899 21.537 17.3681C21.537 17.4983 21.5332 17.6371 21.5293 17.7798V17.7799C21.509 18.5193 21.4858 19.3656 21.9726 19.6802C22.2223 19.8415 22.8331 19.7042 24.3603 17.111C25.084 15.8819 25.627 14.4368 25.627 14.4368C25.627 14.4368 25.7453 14.1791 25.9297 14.0688C26.1181 13.9561 26.3726 13.9907 26.3726 13.9907L29.8023 13.9695C29.8023 13.9695 30.8329 13.8466 30.9997 14.3118C31.1747 14.8001 30.6146 15.9402 29.2135 17.8077C27.8827 19.5813 27.236 20.2332 27.2968 20.8106C27.3401 21.2221 27.7429 21.5959 28.5137 22.311L28.5668 22.3603C30.2548 23.9272 30.7051 24.7501 30.8121 24.9456C30.8207 24.9615 30.8271 24.9732 30.8318 24.9809C31.5873 26.2337 29.9939 26.332 29.9939 26.332L26.9477 26.3746C26.9477 26.3746 26.2931 26.5041 25.4317 25.9125C24.9813 25.6033 24.5409 25.0985 24.1214 24.6174L24.1214 24.6174C23.4798 23.8818 22.8868 23.2019 22.3806 23.3624C21.5317 23.6319 21.5583 25.4613 21.5583 25.4613C21.5583 25.4613 21.5645 25.852 21.371 26.0601C21.1605 26.2866 20.7487 26.332 20.7487 26.332Z"
+                  fill="#121723" />
+              </svg>
+            </a>
+          </li>
+          <li class="modal-social__item">
+            <a href="https://www.google.ru" class="modal-social__link modal-social__link-google flex" aria-label="Гугл"
+              target="_blank">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="33.33" height="33.33" rx="2" />
+                <path
+                  d="M23.9403 14.9923C23.1517 14.2694 21.7687 13.4043 19.7183 13.4043C16.8309 13.4043 14.3802 15.2649 13.4945 17.8364C13.2761 18.5001 13.1427 19.2111 13.1427 19.9459C13.1427 20.6806 13.2761 21.3917 13.5066 22.0553C14.3802 24.6269 16.8309 26.4874 19.7183 26.4874C21.344 26.4874 22.5815 26.0489 23.5036 25.4208C24.9595 24.4254 25.6146 22.9441 25.7359 21.9605H19.7183V18.0024H29.9701C30.1277 18.666 30.2006 19.3059 30.2006 20.1829C30.2006 23.4299 29.0116 26.1675 26.9491 28.028C25.1414 29.6634 22.6664 30.6115 19.7183 30.6115C15.4477 30.6115 11.7595 28.2176 9.96398 24.7335C9.22395 23.2877 8.79932 21.6642 8.79932 19.9459C8.79932 18.2275 9.22395 16.604 9.96398 15.1582C11.7595 11.6741 15.4477 9.28027 19.7183 9.28027C22.6664 9.28027 25.1293 10.335 27.0219 12.0533L23.9403 14.9923Z"
+                  fill="#121723" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="header__bottom">
-
       <div class="header__bottom-container container flex">
         <div class="header__bottom-right flex hidden">
           <button class="header__bottom-btn btn-reset" aria-label="Кнопка раскрытия">
@@ -124,7 +191,6 @@
           </button>
           <p class="header__bottom-descr">Что в эфире?</p>
         </div>
-
         <nav class="header__menu menu">
           <ul class="menu__list list-reset flex" aria-label="Нижнее навигационное меню">
             <li class="menu__item">
@@ -159,7 +225,6 @@
             </li>
           </ul>
         </nav>
-
         <ul class="header__live live list-reset flex" aria-label="Список онлайн эфира">
           <li class="live__item flex">
             <button class="live__btn-play btn-reset flex" aria-label="Кнопка Play">
@@ -220,7 +285,6 @@
         </ul>
       </div>
     </div>
-
   </header>
 
   <main class="main">
@@ -240,7 +304,7 @@
             передач
             и&nbsp;многое другое:)
           </p>
-          <a class="hero__btn btn btn-reset" href="#" aria-label="Слушать эфир">
+          <a class="hero__btn btn btn-reset" href="#" aria-label="Слушать эфир" role="button">
             Слушать эфир
           </a>
         </div>
@@ -255,11 +319,13 @@
         <ul class="podcasts__list list-reset flex">
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--europe flex">
-                <time class="podcasts__date flex" datetime="2022-06-14">
-                  14&nbsp;июня
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--europe flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-06-14">
+                    14&nbsp;июня
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -320,11 +386,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--music flex">
-                <time class="podcasts__date flex" datetime="2022-06-11">
-                  11&nbsp;июня
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--music flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-06-11">
+                    11&nbsp;июня
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -385,11 +453,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--people flex">
-                <time class="podcasts__date flex" datetime="2022-06-08">
-                  8&nbsp;июня
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--people flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-06-08">
+                    8&nbsp;июня
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -450,11 +520,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--africa flex">
-                <time class="podcasts__date flex" datetime="2022-06-05">
-                  5&nbsp;июня
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--africa flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-06-05">
+                    5&nbsp;июня
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -515,11 +587,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--everything flex">
-                <time class="podcasts__date flex" datetime="2022-06-02">
-                  2&nbsp;июня
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--everything flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-06-02">
+                    2&nbsp;июня
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -580,11 +654,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--colors flex">
-                <time class="podcasts__date flex" datetime="2022-05-28">
-                  28&nbsp;мая
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--colors flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-05-28">
+                    28&nbsp;мая
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -645,11 +721,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--sound flex">
-                <time class="podcasts__date flex" datetime="2022-05-22">
-                  22&nbsp;мая
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--sound flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-05-22">
+                    22&nbsp;мая
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -710,11 +788,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--etiquette flex">
-                <time class="podcasts__date flex" datetime="2022-05-18">
-                  18&nbsp;мая
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--etiquette flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-05-18">
+                    18&nbsp;мая
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -775,11 +855,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--europe flex">
-                <time class="podcasts__date flex" datetime="2022-06-15 17:00">
-                  14&nbsp;июня
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--europe flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-06-15 17:00">
+                    14&nbsp;июня
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -840,11 +922,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--music flex">
-                <time class="podcasts__date flex" datetime="2022-06-11">
-                  11&nbsp;июня
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--music flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-06-11">
+                    11&nbsp;июня
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -905,11 +989,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--people flex">
-                <time class="podcasts__date flex" datetime="2022-06-08">
-                  8&nbsp;июня
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--people flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-06-08">
+                    8&nbsp;июня
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -970,11 +1056,13 @@
           </li>
           <li class="podcasts__item">
             <article class="podcasts__blok flex">
-              <div class="podcasts__icon podcasts__icon--africa flex">
-                <time class="podcasts__date flex" datetime="2022-06-05">
-                  5&nbsp;июня
-                </time>
-              </div>
+              <figure class="podcasts__icon podcasts__icon--africa flex">
+                <figcaption class="podcasts__text flex">
+                  <time class="podcasts__date" datetime="2022-06-05">
+                    5&nbsp;июня
+                  </time>
+                </figcaption>
+              </figure>
               <div class="podcasts__content flex">
                 <div class="podcasts__wrapper podcasts-wrapper flex">
                   <div class="podcasts-wrapper__text">
@@ -1071,7 +1159,7 @@
                   <p class="broadcast-block__descr font-small text-reset">
                     Анонсируется отдельно
                   </p>
-                  <a href="#" class="broadcast-block__link font-descr flex">
+                  <a href="#" class="broadcast-block__link font-descr flex" tabindex="-1">
                     <span>Подробнее</span>
                     <svg class="broadcast-block__svg" width="21" height="8" viewBox="0 0 21 8" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -1098,7 +1186,7 @@
                   <p class="broadcast-block__descr font-small text-reset">
                     По понедельникам в 10:00
                   </p>
-                  <a href="#" class="broadcast-block__link font-descr flex">
+                  <a href="#" class="broadcast-block__link font-descr flex" tabindex="-1">
                     <span>Подробнее</span>
                     <svg class="broadcast-block__svg" width="21" height="8" viewBox="0 0 21 8" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -1125,7 +1213,7 @@
                   <p class="broadcast-block__descr font-small text-reset">
                     По&nbsp;вторникам в&nbsp;12:00
                   </p>
-                  <a href="#" class="broadcast-block__link font-descr flex">
+                  <a href="#" class="broadcast-block__link font-descr flex" tabindex="-1">
                     <span>Подробнее</span>
                     <svg class="broadcast-block__svg" width="21" height="8" viewBox="0 0 21 8" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -1152,7 +1240,7 @@
                   <p class="broadcast-block__descr font-small text-reset">
                     По&nbsp;пятницам в&nbsp;17:00
                   </p>
-                  <a href="#" class="broadcast-block__link font-descr flex">
+                  <a href="#" class="broadcast-block__link font-descr flex" tabindex="-1">
                     <span>Подробнее</span>
                     <svg class="broadcast-block__svg" width="21" height="8" viewBox="0 0 21 8" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -1179,7 +1267,7 @@
                   <p class="broadcast-block__descr font-small text-reset">
                     По&nbsp;субботам в&nbsp;10:00
                   </p>
-                  <a href="#" class="broadcast-block__link font-descr flex">
+                  <a href="#" class="broadcast-block__link font-descr flex" tabindex="-1">
                     <span>Подробнее</span>
                     <svg class="broadcast-block__svg" width="21" height="8" viewBox="0 0 21 8" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -1206,7 +1294,7 @@
                   <p class="broadcast-block__descr font-small text-reset">
                     По&nbsp;воскресеньям в&nbsp;15:30
                   </p>
-                  <a href="#" class="broadcast-block__link font-descr flex">
+                  <a href="#" class="broadcast-block__link font-descr flex" tabindex="-1">
                     <span>Подробнее</span>
                     <svg class="broadcast-block__svg" width="21" height="8" viewBox="0 0 21 8" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -1224,7 +1312,7 @@
             </li>
           </ul>
           <div class="broadcast__archive broadcast-archive flex">
-            <a href="#" class="broadcast-archive__link btn-icon">
+            <a href="#" class="broadcast-archive__link btn-icon" role="button" aria-label="Кнопка архив">
               Архив
             </a>
             <p class="broadcast-archive__descr font-descr text-reset">
@@ -1248,7 +1336,6 @@
           филологи
           и&nbsp;много других интересных гостей!
         </p>
-
         <div class="guests__wraper flex">
           <ul class="guests__list guests-category list-reset">
             <li class="guests-category__item">
@@ -2009,11 +2096,11 @@
             <h3 class="playlists-genres__title font-descr text-reset">
               Жанр
             </h3>
-            <ul class="playlists-genres__list list-reset flex" aria-label="Список кнопок выбора жанра">
+            <ul class="playlists-genres__list list-reset flex" aria-label="Список кнопок выбора жанра" data-simplebar>
               <li class="playlists-genres__item">
                 <label class="playlists-genres__label flex" tabindex="0">
                   <input type="radio" name="genres" id="postpunk" checked class="playlists-genres__input">
-                  <span class="playlists-genres__icon"></span>
+                  <span class="playlists-genres__icon" role="radio" aria-checked="true"></span>
                   <span class="playlists-genres__text font-text">
                     Постпанк
                   </span>
@@ -2022,7 +2109,7 @@
               <li class="playlists-genres__item">
                 <label class="playlists-genres__label flex" tabindex="0">
                   <input type="radio" name="genres" id="hardcore" class="playlists-genres__input">
-                  <span class="playlists-genres__icon"></span>
+                  <span class="playlists-genres__icon" role="radio" aria-checked="true"></span>
                   <span class="playlists-genres__text font-text">
                     Хардкор
                   </span>
@@ -2031,7 +2118,7 @@
               <li class="playlists-genres__item">
                 <label class="playlists-genres__label flex" tabindex="0">
                   <input type="radio" name="genres" id="punkrock" class="playlists-genres__input">
-                  <span class="playlists-genres__icon"></span>
+                  <span class="playlists-genres__icon" role="radio" aria-checked="true"></span>
                   <span class="playlists-genres__text font-text">
                     Панк-рок
                   </span>
@@ -2040,7 +2127,7 @@
               <li class="playlists-genres__item">
                 <label class="playlists-genres__label flex" tabindex="0">
                   <input type="radio" name="genres" id="rock" class="playlists-genres__input">
-                  <span class="playlists-genres__icon"></span>
+                  <span class="playlists-genres__icon" role="radio" aria-checked="true"></span>
                   <span class="playlists-genres__text font-text">
                     Рок
                   </span>
@@ -2049,7 +2136,7 @@
               <li class="playlists-genres__item">
                 <label class="playlists-genres__label flex" tabindex="0">
                   <input type="radio" name="genres" id="progressiverock" class="playlists-genres__input">
-                  <span class="playlists-genres__icon"></span>
+                  <span class="playlists-genres__icon" role="radio" aria-checked="true"></span>
                   <span class="playlists-genres__text font-text">
                     Прогрессивный рок
                   </span>
@@ -2058,7 +2145,7 @@
               <li class="playlists-genres__item">
                 <label class="playlists-genres__label flex" tabindex="0">
                   <input type="radio" name="genres" id="electronicmusic" class="playlists-genres__input">
-                  <span class="playlists-genres__icon"></span>
+                  <span class="playlists-genres__icon" role="radio" aria-checked="true"></span>
                   <span class="playlists-genres__text font-text">
                     Электронная музыка
                   </span>
@@ -2067,7 +2154,7 @@
               <li class="playlists-genres__item">
                 <label class="playlists-genres__label flex" tabindex="0">
                   <input type="radio" name="genres" id="classicalmusic" class="playlists-genres__input">
-                  <span class="playlists-genres__icon"></span>
+                  <span class="playlists-genres__icon" role="radio" aria-checked="true"></span>
                   <span class="playlists-genres__text font-text">
                     Классическая музыка
                   </span>
@@ -2076,7 +2163,7 @@
               <li class="playlists-genres__item">
                 <label class="playlists-genres__label flex" tabindex="0">
                   <input type="radio" name="genres" id="sounds" class="playlists-genres__input">
-                  <span class="playlists-genres__icon"></span>
+                  <span class="playlists-genres__icon" role="radio" aria-checked="true"></span>
                   <span class="playlists-genres__text font-text">
                     Звуки природы и&nbsp;шум города
                   </span>
@@ -2589,7 +2676,7 @@
           <p class="adv__price text-reset">
             2&nbsp;800&nbsp;₽
           </p>
-          <a href="https://market.yandex.ru" class="adv__link adv-link btn-icon flex" target="_blank">
+          <a href="https://market.yandex.ru" class="adv__link adv-link btn-icon flex" role="button" target="_blank">
             <svg class="adv-link__img" width="21" height="20" viewBox="0 0 21 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_69674_968)">
@@ -2768,7 +2855,7 @@
           <button id="swiperPrev" class="swiper-navigation__btn swiper-navigation__prev btn-reset"></button>
           <button id="swiperNext" class="swiper-navigation__btn swiper-navigation__next btn-reset"></button>
         </div>
-        <form class="about__form form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
+        <form class="about__form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
           <div class="about__text flex">
             <div class="about__item">
               <textarea class="about__textarea" name="message" placeholder="Что скажете?" data-validate-field="text"
@@ -2784,11 +2871,11 @@
             </div>
           </div>
           <div class="about__agreement flex">
-            <button class="about__btn btn-reset btn">Отправить</button>
+            <button type="submit" class="about__btn btn-reset btn">Отправить</button>
             <div class="about__item-check">
               <label class="about__check font-small flex" tabindex="0" aria-label="Флажок">
                 <input class="about__mark" type="checkbox" name="checkbox" data-validate-field="checkbox2" checked>
-                <span class="about__visibility"></span>
+                <span class="about__visibility" role="checkbox" aria-checked="true"></span>
                 Согласен на&nbsp;обработку персональных данных
               </label>
             </div>
@@ -2914,6 +3001,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="libs/choices.min.js"></script>
   <script src="libs/accordion.min.js"></script>
   <script src="libs/just-validate.min.js"></script>
