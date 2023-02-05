@@ -1573,12 +1573,6 @@
     column-gap: var(--gap);
   }
 
-  .guests-category__name {
-    -webkit-column-width: 30px;
-    -moz-column-width: 30px;
-    column-width: 30px;
-  }
-
   .guests--active .guests-category__bottom {
     padding: 21px 0 22px 0;
   }
