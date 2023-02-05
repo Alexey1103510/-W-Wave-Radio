@@ -881,7 +881,7 @@
     padding: var(--gap);
   }
 
-  .podcasts__date {
+  .podcasts__text {
     width: 80px;
     min-height: 25px;
     font-size: var(--font-text-small);
@@ -925,7 +925,7 @@
     height: 80px;
   }
 
-  .podcasts__date {
+  .podcasts__text {
     width: 100px;
     min-height: 35px;
   }
@@ -1384,6 +1384,11 @@
 
 
 @media (max-width:1200px) {
+
+  .guests__descr {
+    margin-bottom: 52px;
+  }
+
   .guests__list {
     -ms-flex-preferred-size: 68%;
     flex-basis: 68%;
@@ -1400,17 +1405,22 @@
   }
 
   .guests-cards__avatar {
+    margin-top: -2px;
     width: 255px;
     max-height: 159px;
   }
 
   .guests--active .guests-category__bottom {
-    padding: 30px 0 20px 0;
+    padding: 29px 0 21px 0;
   }
 }
 
 
 @media (max-width:992px) {
+  .guests__title {
+    margin-bottom: 13px;
+  }
+
   .guests__wraper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1443,10 +1453,12 @@
   }
 
   .guests__descr {
+    margin-bottom: 50px;
     max-width: 100%;
   }
 
   .guests-cards__avatar {
+    margin-top: 0;
     width: 100%;
     max-height: 220px;
   }
@@ -1526,7 +1538,7 @@
   }
 
   .guests-cards__avatar {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
   }
 
   .guests-cards__foto {
@@ -1546,13 +1558,13 @@
   }
 
   .guests-cards__descr {
-    margin-bottom: 29px;
+    margin-bottom: 30px;
     max-width: 100%;
     font-size: var(--font-text-big);
   }
 
   .guests-cards__link {
-    padding: 8px 13px;
+    padding: 7px 13px;
     font-size: var(--font-text-big);
   }
 }
@@ -1613,7 +1625,7 @@
 @media (max-width:1200px) {
 
   .playlists {
-    padding-bottom: 91px;
+    padding-bottom: var(--padding-section);
   }
 
   .playlists__title {
@@ -1625,13 +1637,26 @@
   }
 
   .playlists__genres {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     max-width: 100%;
   }
 
   .playlists-genres__list {
     max-width: 64%;
-    max-height: 225px;
+    height: 185px;
+  }
+
+  .playlists-genres__list .simplebar-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 100%;
   }
 
   .playlists-genres__item {
@@ -1692,7 +1717,7 @@
   }
 
   .playlists__note {
-    padding: 38px 0;
+    padding: 39px 0 33px 0;
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
@@ -1712,7 +1737,7 @@
 
   .playlists-genres__list {
     max-width: 98%;
-    max-height: 290px;
+    height: 247px;
   }
 
   .playlists-genres__item:not(:last-child) {
@@ -1743,7 +1768,7 @@
   }
 
   .playlists__genres {
-    margin-bottom: 29px;
+    margin-bottom: 18px;
   }
 
   .playlists-genres__title {
@@ -1758,8 +1783,9 @@
     flex-direction: row;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    max-width: 100%;
-    max-height: none;
+    max-width: calc(100% + ((100vw - 256px) / 2));
+    width: 100vw;
+    height: 47px;
   }
 
   .playlists-genres__item {
@@ -1871,6 +1897,13 @@
     font-size: var(--font-text-small);
     line-height: 183%;
   }
+
+  .simplebar-scrollbar:before {
+    height: 3px;
+    background: var(--color-btn-lightpurple);
+    border-radius: 3px;
+    opacity: 1;
+  }
 }
 
 
@@ -1914,6 +1947,10 @@
     padding-bottom: var(--padding-section);
   }
 
+  .adv__text {
+    padding-top: 32px;
+  }
+
   .adv__img {
     top: -21px;
     width: 51.8%;
@@ -1924,7 +1961,7 @@
   }
 
   .adv__descr:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 15px;
     max-width: 100%;
   }
 
@@ -1969,11 +2006,16 @@
   }
 
   .adv__descr:not(:last-child) {
+    margin-bottom: 13px;
     max-width: 99%;
   }
 }
 
 @media (max-width:576px) {
+  .adv {
+    padding-top: 54px;
+  }
+
   .adv__icon {
     width: 62px;
     height: 62px;
@@ -2125,10 +2167,11 @@
 
 @media (max-width:1200px) {
   .about {
-    padding-top: 96px;
+    padding-top: var(--padding-section);
   }
 
   .about__top {
+    margin-bottom: 29px;
     padding-right: 33%;
     background: url(../img/about-dawn.svg) right center no-repeat;
   }
@@ -2156,6 +2199,7 @@
 @media (max-width:992px) {
 
   .about__top {
+    margin-bottom: var(--gap);
     padding-right: 0;
     padding-bottom: 142px;
     background: url(../img/about-dawn.svg) right bottom / 112px no-repeat;
@@ -2218,6 +2262,7 @@
   }
 
   .about__top {
+    margin-bottom: 29px;
     padding-bottom: 0;
     background: none;
   }
@@ -2368,12 +2413,25 @@
 
 @media (max-width:1200px) {
   .footer__logo-container {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
+  }
+
+  .footer__top {
+    padding-top: 95px;
+  }
+
+  .footer__item:not(:nth-child(3n)) {
+    margin-bottom: 17px;
+  }
+
+  .footer__item:nth-last-child(n+4) {
+    margin-right: 109px;
   }
 }
 
 @media (max-width:992px) {
   .footer__top {
+    padding-top: 96px;
     padding-bottom: 68px;
   }
 
