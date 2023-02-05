@@ -212,3 +212,68 @@ const validate = new window.JustValidate('.about__form', {
     },
   },
 });
+
+
+
+// modal__form
+const validates = new window.JustValidate('.modal__form', {
+  colorWrong: '#D52B1E',
+  rules: {
+    name: {
+      required: true,
+      minLength: 3,
+      maxLength: 15,
+    },
+    password: {
+      required: true,
+      minLength: 4,
+      maxLength: 8,
+    },
+  },
+
+  messages: {
+    name: {
+      required: 'Вы не ввели Логин',
+      minLength: 'Не достаточное количество символов',
+      maxLength: 'Вы ввели больше чем положено',
+    },
+    password: {
+      password: 'пароль (минимум 1 цифра и 1 буква)',
+      required: 'Вы не ввели Пароль',
+      minLength: 'Не достаточное количество символов',
+      maxLength: 'Вы ввели больше чем положено',
+    },
+  },
+});
+
+
+function openLogin() {
+  document.querySelector('#login').addEventListener('click', () => {
+    document.querySelector('#modal').style.display = 'block';
+  });
+  document.querySelector('#closeModal').addEventListener('click', () => {
+    document.querySelector('#modal').style.display = 'none';
+  });
+}
+
+
+// modal
+let modalInput = document.querySelector('.header-form-private__btn');
+let modal = document.querySelector('.modal');
+let modalClosed = document.querySelector('.modal__btn-closed');
+
+modalInput.addEventListener('click', function () {
+  modal.classList.toggle('modal--active');
+});
+
+modalClosed.addEventListener('click', function () {
+  modal.classList.remove('modal--active');
+});
+
+
+// scroll
+dropdown = document.querySelector('.playlists-genres__list')
+new SimpleBar(dropdown, {
+  autoHide: false,
+  scrollbarMaxSize: 50,
+});
