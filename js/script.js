@@ -105,19 +105,14 @@ let guestsCards = document.querySelectorAll('.guests__cards');
 
 guestsLink.forEach(function (element) {
   element.addEventListener('click', function (el) {
-
     const path = el.currentTarget.dataset.path;
-
     guestsLink.forEach(function (e) {
       e.classList.remove('guests-category__link--active')
     });
-
     el.currentTarget.classList.add('guests-category__link--active');
-
     guestsCards.forEach(function (w) {
       w.classList.remove('guests__cards--active')
     });
-
     document.querySelector(`[data-target="${path}"]`).classList.add('guests__cards--active');
   });
 });
@@ -132,8 +127,12 @@ let swiper = new Swiper('.about__swiper', {
   loop: true,
   speed: 500,
   breakpoints: {
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
     320: {
-      slidesPerView: 3,
+      slidesPerView: 2.3,
       spaceBetween: 20
     },
     577: {
@@ -191,7 +190,6 @@ const validate = new window.JustValidate('.about__form', {
       maxLength: 50,
     },
   },
-
   messages: {
     name: {
       required: 'Вы не ввели имя',
@@ -214,7 +212,6 @@ const validate = new window.JustValidate('.about__form', {
 });
 
 
-
 // modal__form
 const validates = new window.JustValidate('.modal__form', {
   colorWrong: '#D52B1E',
@@ -230,7 +227,6 @@ const validates = new window.JustValidate('.modal__form', {
       maxLength: 8,
     },
   },
-
   messages: {
     name: {
       required: 'Вы не ввели Логин',
@@ -245,16 +241,6 @@ const validates = new window.JustValidate('.modal__form', {
     },
   },
 });
-
-
-function openLogin() {
-  document.querySelector('#login').addEventListener('click', () => {
-    document.querySelector('#modal').style.display = 'block';
-  });
-  document.querySelector('#closeModal').addEventListener('click', () => {
-    document.querySelector('#modal').style.display = 'none';
-  });
-}
 
 
 // modal
