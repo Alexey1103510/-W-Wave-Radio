@@ -127,11 +127,11 @@
         <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
           <div class="modal__item">
             <input class="modal__input" type="text" name="login" placeholder="Логин" data-validate-field="name"
-              aria-label="Введите Логин">
+              aria-label="Введите Логин" autocomplete="nickname">
           </div>
           <div class="modal__item">
             <input class="modal__input" type="password" name="password" placeholder="Пароль"
-              data-validate-field="password" aria-label="Введите Пароль">
+              data-validate-field="password" aria-label="Введите Пароль" autocomplete="new-password">
           </div>
           <button class="modal__btn btn-reset btn" type="submit">
             Войти
@@ -2350,7 +2350,7 @@
                 </div>
                 <div class="playlists-cards__text flex">
                   <h4 class="playlists-cards__title font-descr text-reset">
-                    Июльские Дни
+                    Июльские Дни
                   </h4>
                   <p class="playlists-cards__descr font-small text-reset">
                     Альбом &laquo;Колокол&raquo;
