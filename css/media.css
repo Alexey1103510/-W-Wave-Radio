@@ -473,6 +473,17 @@
   .header__burger:active {
     background: none;
   }
+
+  /* modal */
+
+  .modal__container {
+    padding: 60px 38px 60px 40px;
+    max-width: 539px;
+  }
+
+  .modal__item {
+    width: 100%;
+  }
 }
 
 @media (max-width:767px) {
@@ -484,6 +495,18 @@
     font-size: 14px;
   }
 }
+
+
+@media (max-width:690px) {
+  .header__nav {
+    padding-left: 75px;
+  }
+
+  .nav__list {
+    width: 66%;
+  }
+}
+
 
 @media (max-width:576px) {
 
@@ -528,6 +551,7 @@
 
   .nav__list {
     width: 100%;
+    max-width: 286px;
     height: 150px;
   }
 
@@ -573,6 +597,7 @@
     -ms-flex-pack: start;
     justify-content: flex-start;
     width: 100%;
+    max-width: 286px;
     height: 120px;
   }
 
@@ -717,7 +742,8 @@
   }
 
   .live__descr {
-    margin-bottom: 4px;
+    font-size: 10px;
+    margin-bottom: 3px;
   }
 
   .live__btn-play {
@@ -833,6 +859,54 @@
 
   .header-form-search__form {
     right: 0;
+  }
+
+  /* modal */
+  .modal__container {
+    margin-top: 55px;
+    padding: 40px 20px;
+    max-width: 256px;
+  }
+
+  .modal__btn-closed {
+    top: 20px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal__title {
+    margin-bottom: 14px;
+  }
+
+  .modal__text {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .modal__item {
+    margin-bottom: 20px;
+    min-height: 40px;
+  }
+
+  .modal__input {
+    padding: 11px 17px;
+  }
+
+  .modal__btn {
+    margin-bottom: 29px;
+    padding: 12px 57px;
+  }
+
+  .modal__help {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 200%;
+  }
+
+  .modal-social__item:not(:last-child) {
+    margin-right: 48px;
   }
 }
 
@@ -1577,6 +1651,10 @@
     padding: 21px 0 22px 0;
   }
 
+  .guests-category__name {
+    max-width: 70%;
+  }
+
   .guests-category__name:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -1970,10 +2048,8 @@
   }
 
   .simplebar-scrollbar:before {
-    height: 3px;
-    background: var(--color-btn-lightpurple);
-    border-radius: 3px;
-    opacity: 1;
+    height: 0;
+    opacity: 0;
   }
 }
 
