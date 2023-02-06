@@ -132,7 +132,7 @@ let swiper = new Swiper('.about__swiper', {
       spaceBetween: 30
     },
     320: {
-      slidesPerView: 2.3,
+      slidesPerView: 2.32,
       spaceBetween: 20
     },
     577: {
@@ -250,14 +250,16 @@ let modalClosed = document.querySelector('.modal__btn-closed');
 
 modalInput.addEventListener('click', function () {
   modal.classList.toggle('modal--active');
+  document.body.classList.toggle('stop-scroll-modal');
 });
 
 modalClosed.addEventListener('click', function () {
   modal.classList.remove('modal--active');
+  document.body.classList.remove('stop-scroll-modal');
 });
 
 
-// scroll
+// scroll-playlists
 dropdown = document.querySelector('.playlists-genres__list')
 new SimpleBar(dropdown, {
   autoHide: false,
