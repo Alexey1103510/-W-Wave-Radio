@@ -93,6 +93,7 @@
 
 @media (min-width:2160px) {
   .header__bottom-container {
+    min-height: 90px;
     background-position: right 105px center;
   }
 
@@ -111,7 +112,7 @@
 
   .live__item {
     min-width: 250px;
-    min-height: 50px;
+    min-height: 66px;
   }
 
   .header-form-search__form {
@@ -131,11 +132,41 @@
   .header-form-private__btn {
     padding: 12px 28px;
   }
+
+  .modal__container {
+    margin-top: 100px;
+    padding: 80px;
+    max-width: 930px;
+  }
+
+  .modal__item .js-validate-error-label {
+    top: 8px;
+    left: 40px;
+    font-size: 18px;
+  }
+
+  .modal__input {
+    padding: 27px 37px;
+    border-radius: 50px;
+  }
+
+  .modal__btn-closed {
+    top: 40px;
+    right: 40px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .modal-social__link {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 
 @media (min-width:3000px) {
   .header__bottom-container {
+    min-height: 100px;
     background-position: right 115px center;
   }
 
@@ -154,7 +185,7 @@
 
   .live__item {
     min-width: 350px;
-    min-height: 60px;
+    min-height: 80px;
   }
 
   .header-form-search__input {
@@ -169,6 +200,35 @@
 
   .menu__item:not(:last-child) {
     margin-right: 70px;
+  }
+
+  .modal__container {
+    margin-top: 120px;
+    padding: 100px;
+    max-width: 1200px;
+  }
+
+  .modal__input {
+    padding: 32px 40px;
+    border-radius: 60px;
+  }
+
+  .modal__btn-closed {
+    top: 50px;
+    right: 50px;
+    width: 62px;
+    height: 62px;
+  }
+
+  .modal-social__link {
+    width: 60px;
+    height: 60px;
+  }
+
+  .modal__item .js-validate-error-label {
+    top: 10px;
+    left: 45px;
+    font-size: 22px;
   }
 }
 
@@ -472,6 +532,10 @@
 
   .header__burger:active {
     background: none;
+  }
+
+  .header-form-search__input {
+    width: 230px;
   }
 
   /* modal */
@@ -907,6 +971,12 @@
 
   .modal-social__item:not(:last-child) {
     margin-right: 48px;
+  }
+
+  .modal__item .js-validate-error-label {
+    top: 3px;
+    left: 20px;
+    font-size: 9px;
   }
 }
 
@@ -2282,6 +2352,16 @@
   .about__btn {
     margin-bottom: var(--gap);
   }
+
+  .about__item .js-validate-error-label {
+    font-size: 20px;
+  }
+
+  .about__item-check .js-validate-error-label {
+    top: -25px;
+    left: 30px;
+    font-size: 20px;
+  }
 }
 
 
@@ -2312,6 +2392,25 @@
 
   .swiper-navigation {
     top: -370px;
+  }
+
+  .about__item .js-validate-error-label {
+    top: 15px;
+    left: 50px;
+    font-size: 28px;
+  }
+
+  .about__item-check .js-validate-error-label {
+    top: -32px;
+    font-size: 28px;
+  }
+
+  .about__textarea {
+    padding: 50px;
+  }
+
+  .about__input {
+    padding: 50px;
   }
 }
 
@@ -2508,6 +2607,11 @@
 
   .about__mark:checked+.about__visibility::before {
     width: 6px;
+  }
+
+  .about__item .js-validate-error-label {
+    top: 5px;
+    left: 24px;
   }
 }
 
