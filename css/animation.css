@@ -1,0 +1,42 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.btn,
+.adv__link {
+  -webkit-animation: btn 1s alternate ease-in-out infinite;
+  animation: btn 1s alternate ease-in-out infinite;
+}
+
+@-webkit-keyframes btn {
+  from {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  to {
+    -webkit-transform: translate(3px);
+    transform: translate(3px);
+  }
+}
+
+@keyframes btn {
+  from {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  to {
+    -webkit-transform: translate(3px);
+    transform: translate(3px);
+  }
+}
+
+.btn:hover,
+.adv__link:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
